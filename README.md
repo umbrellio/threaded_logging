@@ -1,6 +1,6 @@
 # Description
 
-This gem patches default ruby log formatter so that every line includes a digest of current process PID + currenct thread id so that you can easily grep the logs of every particular thread. It also adds the metadata part to each line of the message in case it is multiline.
+This gem patches default ruby log formatter so that every line includes a digest of current process PID + current thread id so that you can easily grep the logs of every particular thread. It also adds the metadata part to each line of the message in case it is multiline.
 
 Before:
 
