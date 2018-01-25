@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary        = "Better formatter for ruby loggers."
   spec.description    = "Add current thread's fingerprint to all your logs."
-  spec.homepage       = "https://github.com/tycooon/threaded_logging"
+  spec.homepage       = "https://github.com/umbrellio/threaded_logging"
   spec.license        = "MIT"
 
   spec.files          = ["lib/threaded_logging.rb"]
