@@ -1,12 +1,25 @@
-Gem::Specification.new do |s|
-  s.name        = "threaded_logging"
-  s.version     = "0.1.2"
-  s.date        = "2016-05-23"
-  s.summary     = "Better formatter for ruby loggers"
-  s.description = "Add current thread's fingerprint to all your logs."
-  s.authors     = ["Yuri Smirnov"]
-  s.email       = "tycoooon@gmail.com"
-  s.files       = ["lib/threaded_logging.rb"]
-  s.homepage    = "https://github.com/tycooon/threaded_logging"
-  s.license     = "MIT"
+# frozen_string_literal: true
+
+Gem::Specification.new do |spec|
+  spec.name           = "threaded_logging"
+  spec.version        = "0.2"
+  spec.authors        = ["Yuri Smirnov"]
+  spec.email          = "tycoooon@gmail.com"
+
+  spec.summary        = "Better formatter for ruby loggers."
+  spec.description    = "Add current thread's fingerprint to all your logs."
+  spec.homepage       = "https://github.com/tycooon/threaded_logging"
+  spec.license        = "MIT"
+
+  spec.files          = ["lib/threaded_logging.rb"]
+  spec.require_paths  = ["lib"]
+
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rubocop-config-umbrellio"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "timecop"
 end
