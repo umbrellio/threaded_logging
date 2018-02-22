@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "logger"
-require "digest"
+require "digest/md5"
 require "English"
 
 module ThreadedLogging
