@@ -19,5 +19,9 @@ I [2016-05-23T22:32:30.483767] #bd134bb0: Line 2
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Author
+## Authors
 Created by Yuri Smirnov.
+
+<a href="https://github.com/umbrellio/">
+<img style="float: left;" src="https://umbrellio.github.io/Umbrellio/supported_by_umbrellio.svg" alt="Supported by Umbrellio" width="439" height="72">
+</a>
