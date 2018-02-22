@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name           = "threaded_logging"
-  spec.version        = "0.2"
+  spec.version        = "0.2.1"
   spec.authors        = ["Yuri Smirnov"]
   spec.email          = "tycoooon@gmail.com"
 
