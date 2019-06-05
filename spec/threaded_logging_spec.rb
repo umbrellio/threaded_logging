@@ -14,6 +14,7 @@ RSpec.describe "threaded_logging" do
 
   describe "#call" do
     before { Timecop.freeze("2018-01-25 20:00 UTC") }
+
     before { allow(ThreadedLogging).to receive(:thread_fingerprint).and_return("75f10407") }
 
     let(:io) { StringIO.new }

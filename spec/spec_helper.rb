@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "bundler/setup"
 require "simplecov"
 require "coveralls"
 
@@ -9,19 +8,16 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   Coveralls::SimpleCov::Formatter,
 ])
 
-SimpleCov.start
+SimpleCov.start { add_filter "spec" }
 
+require "bundler/setup"
 require "timecop"
 require "threaded_logging"
 
 RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
+  config.order = :random
+  Kernel.srand config.seed
   config.example_status_persistence_file_path = ".rspec_status"
-
-  # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
-
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
-  end
+  config.expect_with(:rspec) { |c| c.syntax = :expect }
 end
