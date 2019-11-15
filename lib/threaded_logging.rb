@@ -9,13 +9,25 @@ module ThreadedLogging
     Digest::MD5.hexdigest([Thread.current.object_id, $PID].join)[0...8]
   end
 
-  def call(severity, time, _progname, msg)
-    time_string = time.strftime("%Y-%m-%dT%H:%M:%S.%6N")
-    metadata = "#{severity[0]} [#{time_string}] ##{ThreadedLogging.thread_fingerprint}:"
+  FORMAT = "%s [%s] #%s: %s"
 
+  def call(severity, time, _progname, msg)
     message = +""
-    msg.to_s.lines.each { |line| message << "#{metadata} #{line}" }
-    "#{message}\n"
+
+    msg2str(msg).to_s.lines.each do |line|
+      message << format(
+        FORMAT, severity[0], format_datetime(time), ThreadedLogging.thread_fingerprint, line
+      )
+    end
+
+    message << "\n"
+    message
+  end
+
+  private
+
+  def format_datetime(time)
+    time.strftime(@datetime_format || "%Y-%m-%dT%H:%M:%S.%6N")
   end
 end
 
