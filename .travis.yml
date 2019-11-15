@@ -14,12 +14,3 @@ matrix:
     - rvm: ruby-head
   allow_failures:
     - rvm: ruby-head
-
-deploy:
-  provider: rubygems
-  api_key:
-    secure: H6Az1Sv4grOcu8CI7+VMwgU0y+o7PVLSQ98S5W2qBWe3amVZ9mXW9Jup7fADY3lQ56hIavprKZ5dIc3cib9XnLtJJuTqh7esC6PtglxGv5HwX+2g8N6OMOTFkmIokOgGwFCncux0FwDn6XNXNTzKEKLLVlCi/wt1ySEpWmY2ywnYUnNQFX/3c+kxD7maPMEYi/iGRdds+j2OHw8hTw4hhCAIkr/xVKwuHAxp7iSuSPoLbqcaH20d+fMTiDZljNgTByGiLmGAXbiv+xNPg9DIXzC5qnBQ3OHqTKBfj1OXwt40p+mbKHSPp2PDQRc9LjaK4oCOOM6ph+8X1guWG+7o66wnzH/lT7Pf83oQf37Van76qjgEAXSASZJXNwELgC3WzIm9xC26Dbwiy3fk4H0TXI7gNrhZlsArzlK4HSHAD1Gqeq0KRSM6O5PfQt/nEDgIKLaK/w9SoGk6EAL9WWsFsnx5EAXTaSpadItezxGO0XpRYyJuBlIfspVeRH7Vi+y06eo3VQeuC3b4mpYv+m/LMGQPvtA3c8vKSI4G8+8L/OKu2yD4Jxm9m81jov5FRnlrd7JQV67SH8HuECVOcoh+mfUuciwOF99NVv5VCR4cDWMfleMQPTxLUQ2z3o3RoOMucJhDXu9gyVHGmBp5DhXY7EnHyNRmSyDBFIvJbuSNtBA=
-  gemspec: threaded_logging.gemspec
-  on:
-    repo: umbrellio/threaded_logging
-    branch: master
